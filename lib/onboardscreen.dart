@@ -11,6 +11,7 @@ class OnBoardPage extends StatefulWidget {
 }
 
 class _OnBoardPageState extends State<OnBoardPage> {
+  late final PageController pageController;
   final List<String> icons = [
     "assets/images/onboardicon1.png",
     "assets/images/onboardicon2.png",
@@ -28,6 +29,12 @@ class _OnBoardPageState extends State<OnBoardPage> {
     "Your favorite meal & order will be \nimmediately deliver  ",
     "We serve you the fresh and quality\nfood"
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    pageController = PageController();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -121,6 +128,22 @@ class _OnBoardPageState extends State<OnBoardPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  // PageView.builder(
+                  //   itemBuilder: (context, index) {
+                  //     return AnimatedBuilder(
+                  //       animation: pageController,
+                  //       builder: (context, child) {
+                  //         return child!;
+                  //       },
+                  //       child: Image.asset(
+                  //         icons[index],
+                  //         width: MediaQuery.of(context).size.width,
+                  //         height: 250,
+                  //       ),
+                  //     );
+                  //   },
+                  //   itemCount: icons.length,
+                  // ),
                   Draggable(
                     feedback: Image.asset(
                       icons[imgpos],
