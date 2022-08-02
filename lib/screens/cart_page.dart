@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:foodapp/trackpage.dart';
+import 'package:foodapp/screens/track_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CartPage extends StatefulWidget {
@@ -42,38 +42,48 @@ class _CartPageState extends State<CartPage> {
                       borderRadius: BorderRadius.circular(8)),
                   color: Colors.white,
                   child: Container(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width,
                     padding: const EdgeInsets.all(8),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                    child: Stack(
+                      alignment: Alignment.centerLeft,
                       children: [
-                        const Icon(
-                          Icons.location_on_outlined,
-                          color: Color(0xFFF06573),
-                        ),
-                        Container(
-                          transform: Matrix4.translationValues(-10, 0, 0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Titanium city center',
-                                style: GoogleFonts.montserrat(
-                                    color: const Color(
-                                      0xFFF06573,
-                                    ),
-                                    fontSize: 14),
-                              ),
-                              Text(
-                                "Seema Hall, 100 feet Anand nagar Road, jo...",
-                                style: GoogleFonts.montserrat(
-                                    color: Colors.black, fontSize: 14),
-                              ),
-                            ],
+                        const Positioned(
+                          child: Icon(
+                            Icons.location_on_outlined,
+                            color: Color(0xFFF06573),
                           ),
                         ),
-                        TextButton(
+                        Positioned(
+                          left: 31,
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.65,
+                            transform: Matrix4.translationValues(-10, 0, 0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Titanium city center',
+                                  style: GoogleFonts.montserrat(
+                                      color: const Color(
+                                        0xFFF06573,
+                                      ),
+                                      fontSize: 14),
+                                ),
+                                Text(
+                                  "Seema Hall, 100 feet Anand nagar Road, jo...",
+                                  overflow: TextOverflow.ellipsis,
+                                  style: GoogleFonts.montserrat(
+                                      color: Colors.black, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          right: 0,
+                          child: TextButton(
                             onPressed: () {},
                             child: Text(
                               "Change",
@@ -81,7 +91,9 @@ class _CartPageState extends State<CartPage> {
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
                                   color: const Color(0xFFF06573)),
-                            ))
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -310,7 +322,6 @@ class _CartPageState extends State<CartPage> {
                     padding:
                         const EdgeInsets.only(left: 13, right: 13, top: 13),
                     width: MediaQuery.of(context).size.width,
-                    height: 153,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -411,7 +422,7 @@ class _CartPageState extends State<CartPage> {
                       children: [
                         Container(
                             padding: const EdgeInsets.all(9.5),
-                            height: 46,
+                            height: 48,
                             width: MediaQuery.of(context).size.width * 0.32,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(23),
@@ -450,7 +461,7 @@ class _CartPageState extends State<CartPage> {
                         GestureDetector(
                             child: Container(
                               padding: const EdgeInsets.all(13),
-                              height: 46,
+                              height: 48,
                               width: MediaQuery.of(context).size.width * 0.58,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(23),
@@ -513,12 +524,14 @@ class _CartPageState extends State<CartPage> {
                                         )),
                                       )));
                               Timer(
-                                  const Duration(seconds: 3),
-                                  () => Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              const TrackPage())));
+                                const Duration(seconds: 3),
+                                () => Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const TrackPage(),
+                                  ),
+                                ),
+                              );
                             })
                       ],
                     ),

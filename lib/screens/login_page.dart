@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:foodapp/signuppage.dart';
+import 'package:foodapp/screens/sign_up_page.dart';
+import 'package:foodapp/util/assets_images.dart';
+import 'package:foodapp/util/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget {
@@ -23,21 +25,22 @@ class _LoginPageState extends State<LoginPage> {
               Positioned(
                   right: 0,
                   top: 0,
-                  child: Image.asset("assets/images/onboardbg.png")),
+                  child: Image.asset(AssetsImages.onBoardTopIcon)),
               Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "Join us to explore food",
+                      Constant.loginText1,
                       style: GoogleFonts.montserrat(
+                          color: const Color(Constant.textBlackColor),
                           fontSize: 25, fontWeight: FontWeight.w700),
                     ),
                     Text(
-                      "Discover your perfect food",
+                      Constant.loginText2,
                       style: GoogleFonts.montserrat(
-                        color: const Color(0xFF30323E),
+                        color: const Color(Constant.textBlackColor),
                         fontSize: 20,
                       ),
                     ),
@@ -48,21 +51,21 @@ class _LoginPageState extends State<LoginPage> {
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: TextField(
                         style: GoogleFonts.montserrat(
-                            fontSize: 16, color: const Color(0xFF818181)),
+                            fontSize: 16, color: const Color(Constant.textGrayColor)),
                         maxLength: 10,
                         keyboardType: TextInputType.number,
                         controller: phoneController,
                         decoration: InputDecoration(
-                          hintText: "Enter your mobile No",
+                          hintText: Constant.phoneFiledHint,
                           hintStyle: GoogleFonts.montserrat(
-                              fontSize: 16, color: const Color(0xFF818181)),
+                              fontSize: 16, color: const Color(Constant.textGrayColor)),
                           label: const Text(
-                            "Phone Number",
+                            Constant.phoneFiledLabel,
                           ),
                           prefix: Text(
-                            "+91 | ",
+                            Constant.phonePrefixText,
                             style: GoogleFonts.montserrat(
-                                color: const Color(0xFF818181)),
+                                color: const Color(Constant.textGrayColor)),
                           ),
                           counterText: "",
                           border: OutlineInputBorder(
@@ -80,17 +83,17 @@ class _LoginPageState extends State<LoginPage> {
                         style: OutlinedButton.styleFrom(
                             fixedSize:
                                 Size(MediaQuery.of(context).size.width, 50),
-                            primary: const Color(0xFFFBA0A2),
+                            primary: const Color(Constant.textThemeColor),
                             side: const BorderSide(
-                                color: Color(0xFFFBA0A2), width: 2),
+                                color: Color(Constant.mainColor), width: 2),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30))),
                         onPressed: () {},
                         child: Text(
-                          "Request OTP",
+                          Constant.requestOtp,
                           style: GoogleFonts.montserrat(
                               fontSize: 20,
-                              color: const Color(0xFFFBA0A2),
+                              color: const Color(Constant.textThemeColor),
                               fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -99,10 +102,10 @@ class _LoginPageState extends State<LoginPage> {
                       height: 38,
                     ),
                     Text(
-                      "Or",
+                      Constant.or,
                       style: GoogleFonts.montserrat(
                           fontSize: 20,
-                          color: const Color(0xFFFBA0A2),
+                          color: const Color(Constant.mainColor),
                           fontWeight: FontWeight.w600),
                     ),
                     const SizedBox(
@@ -115,17 +118,17 @@ class _LoginPageState extends State<LoginPage> {
                         Container(
                           width: MediaQuery.of(context).size.width * 0.3,
                           height: 2,
-                          color: const Color(0xFFDADADA),
+                          color: const Color(Constant.lighiGrayColor),
                         ),
                         Text(
-                          "Login With",
+                          Constant.loginWith,
                           style: GoogleFonts.montserrat(
-                              fontSize: 17, color: const Color(0xFF9D9D9D)),
+                              fontSize: 17, color: const Color(Constant.textGrayColor)),
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width * 0.3,
                           height: 2,
-                          color: const Color(0xFFDADADA),
+                          color: const Color(Constant.lighiGrayColor),
                         )
                       ],
                     ),
@@ -135,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                     IconButton(
                       onPressed: () {},
                       icon: Image.asset(
-                        "assets/images/googleicon.png",
+                        AssetsImages.googleIcon,
                         height: 64,
                         width: 64,
                       ),
@@ -147,14 +150,14 @@ class _LoginPageState extends State<LoginPage> {
                     RichText(
                       text: TextSpan(children: [
                         TextSpan(
-                          text: "Don’t have an account ? ",
+                          text: Constant.dontHave,
                           style: GoogleFonts.montserrat(
-                              fontSize: 14, color: const Color(0xFF3F3F3F)),
+                              fontSize: 14, color: const Color(Constant.textGrayColor)),
                         ),
                         TextSpan(
-                            text: "Sign Up",
+                            text: Constant.signUp,
                             style: GoogleFonts.montserrat(
-                                fontSize: 14, color: const Color(0xFFFBA0A2)),
+                                fontSize: 14, color: const Color(Constant.mainColor)),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 Navigator.of(context).push(MaterialPageRoute(

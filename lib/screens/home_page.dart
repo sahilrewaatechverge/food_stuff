@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:foodapp/menu.dart';
-import 'package:foodapp/restaurant.dart';
-import 'package:foodapp/restaurants.dart';
-import 'package:foodapp/menupage.dart';
+import 'package:foodapp/models/menu_model.dart';
+import 'package:foodapp/models/restaurant.dart';
+import 'package:foodapp/models/restaurants.dart';
+import 'package:foodapp/screens/menu_page.dart';
+import 'package:foodapp/util/assets_images.dart';
+import 'package:foodapp/util/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,37 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<String> catName = [
-    "Home Style",
-    "Pizza",
-    "Sandwich",
-    "Burger",
-    "Fries",
-    "Home Style",
-    "Pizza",
-    "Sandwich",
-    "Burger",
-    "Fries"
-  ];
-  List<String> caticon = [
-    "assets/images/caticon5.png",
-    "assets/images/caticon4.png",
-    "assets/images/caticon3.png",
-    "assets/images/caticon2.png",
-    "assets/images/caticon1.png",
-    "assets/images/caticon5.png",
-    "assets/images/caticon4.png",
-    "assets/images/caticon3.png",
-    "assets/images/caticon2.png",
-    "assets/images/caticon1.png",
-  ];
 
-  List<String> offersicon = [
-    "assets/images/offer1.png",
-    "assets/images/offer2.png",
-    "assets/images/offer1.png",
-    "assets/images/offer2.png",
-  ];
   late List<Restaurants> restaurantsList;
   late List<Menu> menuList;
   late Restaurant restaurant;
@@ -159,11 +131,14 @@ class _HomePageState extends State<HomePage> {
                       ),
                       fontSize: 14),
                 ),
-                Text(
-                  "Seema Hall, 100 feet Anand nagar Road, jo...",
-                  style:
-                      GoogleFonts.montserrat(color: Colors.black, fontSize: 14),
-                ),
+                Container(width: MediaQuery.of(context).size.width*0.65,
+                  child: Text(
+                    "Seema Hall, 100 feet Anand nagar Road, jo...",
+                    overflow: TextOverflow.ellipsis,
+                    style:
+                    GoogleFonts.montserrat(color: Colors.black, fontSize: 14),
+                  ),
+                )
               ],
             )
           ],
@@ -264,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(left: 19, bottom: 23),
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  itemCount: catName.length,
+                  itemCount: Constant.catName.length,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) => Padding(
                     padding: const EdgeInsets.only(right: 0),
@@ -286,12 +261,12 @@ class _HomePageState extends State<HomePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image.asset(
-                              caticon[index],
+                              AssetsImages.catIcon[index],
                               width: 41,
                               height: 41,
                             ),
                             Text(
-                              catName[index],
+                              Constant.catName[index],
                               style: GoogleFonts.montserrat(
                                   fontSize: 10, fontWeight: FontWeight.w500),
                             )
@@ -300,7 +275,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       onTap: () {
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text(catName[index]),
+                          content: Text(Constant.catName[index]),
                           duration: const Duration(milliseconds: 500),
                         ));
                       },
@@ -345,13 +320,13 @@ class _HomePageState extends State<HomePage> {
                   physics: const BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  itemCount: offersicon.length,
+                  itemCount: AssetsImages.offersIcon.length,
                   itemBuilder: (context, index) => Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
                     elevation: 2,
                     child: Image.asset(
-                      offersicon[index],
+                      AssetsImages.offersIcon[index],
                       width: 110,
                       height: 130,
                     ),
@@ -367,7 +342,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                height: 195,
+                height: 205,
                 padding: const EdgeInsets.only(top: 21, left: 19),
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
@@ -386,7 +361,6 @@ class _HomePageState extends State<HomePage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         child: SizedBox(
-                          height: 195,
                           width: 266,
                           child: Stack(
                             children: [
@@ -539,7 +513,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                height: 195,
+                height: 205,
                 padding: const EdgeInsets.only(top: 21, left: 19),
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
@@ -558,7 +532,6 @@ class _HomePageState extends State<HomePage> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         child: SizedBox(
-                          height: 195,
                           width: 266,
                           child: Stack(
                             children: [

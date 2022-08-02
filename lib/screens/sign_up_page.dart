@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:foodapp/verification.dart';
+import 'package:foodapp/screens/verification.dart';
+import 'package:foodapp/util/assets_images.dart';
+import 'package:foodapp/util/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -26,14 +28,14 @@ class _SignUpPageState extends State<SignUpPage> {
               Positioned(
                   right: 0,
                   top: 0,
-                  child: Image.asset("assets/images/onboardbg.png")),
+                  child: Image.asset(AssetsImages.onBoardTopIcon)),
               Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "Sign Up",
+                      Constant.signUp,
                       style: GoogleFonts.montserrat(
                           fontSize: 24, fontWeight: FontWeight.w700),
                     ),
@@ -44,14 +46,14 @@ class _SignUpPageState extends State<SignUpPage> {
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: TextField(
                         style: GoogleFonts.montserrat(
-                            fontSize: 14, color: const Color(0xFF818181)),
+                            fontSize: 14, color: const Color(Constant.lighiGrayColor)),
                         keyboardType: TextInputType.name,
                         controller: nameController,
                         decoration: InputDecoration(
                           label: Text(
-                            "Full Name",
+                            Constant.fullName,
                             style: GoogleFonts.montserrat(
-                                fontSize: 14, color: const Color(0xFF818181)),
+                                fontSize: 14, color: const Color(Constant.lighiGrayColor)),
                           ),
                           counterText: "",
                           border: OutlineInputBorder(
@@ -67,14 +69,14 @@ class _SignUpPageState extends State<SignUpPage> {
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: TextField(
                         style: GoogleFonts.montserrat(
-                            fontSize: 14, color: const Color(0xFF818181)),
+                            fontSize: 14, color: const Color(Constant.lighiGrayColor)),
                         keyboardType: TextInputType.emailAddress,
                         controller: emailController,
                         decoration: InputDecoration(
                           label: Text(
-                            "Email",
+                            Constant.email,
                             style: GoogleFonts.montserrat(
-                                fontSize: 14, color: const Color(0xFF818181)),
+                                fontSize: 14, color: const Color(Constant.lighiGrayColor)),
                           ),
                           counterText: "",
                           border: OutlineInputBorder(
@@ -90,15 +92,15 @@ class _SignUpPageState extends State<SignUpPage> {
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: TextField(
                         style: GoogleFonts.montserrat(
-                            fontSize: 14, color: const Color(0xFF818181)),
+                            fontSize: 14, color: const Color(Constant.lighiGrayColor)),
                         maxLength: 10,
                         keyboardType: TextInputType.number,
                         controller: phoneController,
                         decoration: InputDecoration(
                           label: Text(
-                            "Mobile No.",
+                            Constant.mobile,
                             style: GoogleFonts.montserrat(
-                                fontSize: 14, color: const Color(0xFF818181)),
+                                fontSize: 14, color: const Color(Constant.lighiGrayColor)),
                           ),
                           counterText: "",
                           border: OutlineInputBorder(
@@ -116,9 +118,9 @@ class _SignUpPageState extends State<SignUpPage> {
                         style: OutlinedButton.styleFrom(
                             fixedSize:
                                 Size(MediaQuery.of(context).size.width, 50),
-                            primary: const Color(0xFFFBA0A2),
+                            primary: const Color(Constant.mainColor),
                             side: const BorderSide(
-                                color: Color(0xFFFBA0A2), width: 2),
+                                color: Color(Constant.mainColor), width: 2),
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30))),
                         onPressed: () {
@@ -128,7 +130,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)),
                               title: Image.asset(
-                                "assets/images/otpconfirm.png",
+                                AssetsImages.confirmIcon,
                                 width: 50,
                                 height: 50,
                               ),
@@ -136,10 +138,10 @@ class _SignUpPageState extends State<SignUpPage> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
-                                    'Sign Up Successfully ',
+                                    Constant.successText,
                                     style: GoogleFonts.montserrat(
                                       fontSize: 18,
-                                      color: const Color(0xFFFBA0A2),
+                                      color: const Color(Constant.mainColor),
                                     ),
                                   )
                                 ],
@@ -155,10 +157,10 @@ class _SignUpPageState extends State<SignUpPage> {
                                           const Verification())));
                         },
                         child: Text(
-                          "Sign Up",
+                          Constant.signUp,
                           style: GoogleFonts.montserrat(
                               fontSize: 20,
-                              color: const Color(0xFFFBA0A2),
+                              color: const Color(Constant.mainColor),
                               fontWeight: FontWeight.w600),
                         ),
                       ),
@@ -166,9 +168,9 @@ class _SignUpPageState extends State<SignUpPage> {
                     const SizedBox(
                       height: 38,
                     ),
-                    Text("Or",
+                    Text(Constant.or,
                         style: GoogleFonts.montserrat(
-                            color: const Color(0xFFFBA0A2), fontSize: 25)),
+                            color: const Color(Constant.mainColor), fontSize: 25)),
                     const SizedBox(
                       height: 38,
                     ),
@@ -186,7 +188,7 @@ class _SignUpPageState extends State<SignUpPage> {
                             height: 2,
                             color: const Color(0xFFC7C7C7),
                           ),
-                          Text("Sign Up With",
+                          Text(Constant.signUpWith,
                               style: GoogleFonts.montserrat(
                                   color: const Color(0xFF9D9D9D),
                                   fontSize: 17,
@@ -205,7 +207,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     IconButton(
                       onPressed: () {},
                       icon: Image.asset(
-                        "assets/images/googleicon.png",
+                        AssetsImages.googleIcon,
                         height: 64,
                         width: 64,
                       ),

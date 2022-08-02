@@ -1,4 +1,4 @@
-import 'restaurants.dart';
+import 'menu.dart';
 
 class Restaurant {
   Restaurant({
