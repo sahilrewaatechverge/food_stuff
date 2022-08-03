@@ -24,31 +24,31 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
     Menu menu = Menu(
-        img: "assets/images/menuitemimg.png",
+        img: "assets/images/menuItemImg.png",
         amount: "120",
         catname: "In Frankies",
         itemname: "Cheese Burst Frankie",
         rate: "4.5");
     Menu menu1 = Menu(
-        img: "assets/images/coffeeimg.png",
+        img: "assets/images/coffeeImg.png",
         amount: "80",
         catname: "In Coffee",
         itemname: "Cold Coffee",
         rate: "3.5");
     Menu menu2 = Menu(
-        img: "assets/images/warpimg.png",
+        img: "assets/images/warpImg.png",
         amount: "100",
         catname: "In Frankies",
         itemname: " Frankie",
         rate: "4.5");
     Menu menu3 = Menu(
-        img: "assets/images/menuitemimg.png",
+        img: "assets/images/menuItemImg.png",
         amount: "120",
         catname: "In Frankies",
         itemname: "Cheese Burst Frankie",
         rate: "4.5");
     Menu menu4 = Menu(
-        img: "assets/images/warpimg.png",
+        img: "assets/images/warpImg.png",
         amount: "50",
         catname: "In Frankies",
         itemname: "Cheese Burst Frankie",
@@ -82,8 +82,8 @@ class _HomePageState extends State<HomePage> {
         foodcat: "coffee,wrap & Roll",
         foodtype: "Pure Veg",
         menu: menuList,
-        vegimg: "assets/images/vegbanner.png",
-        img: "assets/images/freakit.png",
+        vegimg: "assets/images/vegBanner.png",
+        img: "assets/images/freaKit.png",
         ratings: "4.1");
 
     Restaurants restaurants2 = Restaurants(
@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
         foodcat: "coffee,wrap & Roll",
         foodtype: "Non Veg",
         img: "assets/images/egg.png",
-        vegimg: "assets/images/nonvegbanner.png",
+        vegimg: "assets/images/nonVegBanner.png",
         menu: menuList,
         ratings: "4.2");
 

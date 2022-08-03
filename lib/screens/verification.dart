@@ -45,7 +45,7 @@ class _VerificationState extends State<Verification> {
           Positioned(
               top: 0,
               right: 0,
-              child: Image.asset("assets/images/onboardbg.png")),
+              child: Image.asset("assets/images/onBoardBg.png")),
           Positioned(
               left: 20,
               top: 20,
@@ -62,7 +62,7 @@ class _VerificationState extends State<Verification> {
                   Container(
                     transform: Matrix4.translationValues(-40, 0, 0),
                     child: Image.asset(
-                      "assets/images/otpbg.png",
+                      "assets/images/otpBg.png",
                       width: 250,
                       height: 250,
                     ),
