@@ -111,29 +111,29 @@ class _HomePageState extends State<HomePage> {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         elevation: 0,
-        shadowColor: const Color(0x00ffffff),
+        shadowColor: const Color(Constant.transparent),
         title: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Icon(
               Icons.location_on_outlined,
-              color: Color(0xFFF06573),
+              color: Color(Constant.mainColor),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Titanium city center',
+                  Constant.address1,
                   style: GoogleFonts.montserrat(
                       color: const Color(
-                        0xFFF06573,
+                        Constant.mainColor,
                       ),
                       fontSize: 14),
                 ),
-                Container(width: MediaQuery.of(context).size.width*0.65,
+                SizedBox(width: MediaQuery.of(context).size.width*0.65,
                   child: Text(
-                    "Seema Hall, 100 feet Anand nagar Road, jo...",
+                    Constant.address2,
                     overflow: TextOverflow.ellipsis,
                     style:
                     GoogleFonts.montserrat(color: Colors.black, fontSize: 14),
@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage> {
             child: IconButton(
               iconSize: 24,
               icon: Image.asset(
-                "assets/images/alert.png",
+                AssetsImages.alertIcon,
                 height: 24,
                 width: 24,
               ),
@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> {
             IconButton(
                 onPressed: () {},
                 icon: Image.asset(
-                  "assets/images/favicon.png",
+                  AssetsImages.favIcon,
                   height: 24,
                   width: 24,
                 )),
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
             IconButton(
                 onPressed: () {},
                 icon: Image.asset(
-                  "assets/images/accounticon.png",
+                  AssetsImages.personIcon,
                   height: 24,
                   width: 24,
                 )),
@@ -205,15 +205,15 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(8)),
                     child: TextField(
                       style: GoogleFonts.montserrat(
-                          fontSize: 17, color: const Color(0xFF818181)),
+                          fontSize: 17, color: const Color(Constant.textGrayColor)),
                       keyboardType: TextInputType.text,
                       decoration: InputDecoration(
                         prefixIcon: const Icon(Icons.search),
                         label: Text(
-                          "Restaurant ,name  or dish",
+                          Constant.searchLabel,
                           style: GoogleFonts.montserrat(
                               fontSize: 14,
-                              color: const Color(0xFF818181),
+                              color: const Color(Constant.textGrayColor),
                               fontWeight: FontWeight.w400),
                         ),
                         counterText: "",
@@ -228,7 +228,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 padding: const EdgeInsets.only(left: 19, bottom: 16),
                 child: Text(
-                  "Order Popular One’s",
+                  Constant.popularText,
                   style: GoogleFonts.montserrat(
                       fontWeight: FontWeight.w600, fontSize: 22),
                 ),
@@ -250,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                         width: 65,
                         decoration: BoxDecoration(
                           border: Border.all(
-                              color: const Color(0xFFF06573), width: 2),
+                              color: const Color(Constant.mainColor), width: 2),
                           borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(7),
                               topRight: Radius.circular(31),
@@ -289,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                   width: 40,
                   height: 3,
                   decoration: BoxDecoration(
-                      border: Border.all(color: const Color(0xFFF06573)),
+                      border: Border.all(color: const Color(Constant.mainColor)),
                       borderRadius: BorderRadius.circular(10)),
                 ),
               ),
@@ -298,7 +298,7 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   children: [
                     Image.asset(
-                      "assets/images/offericon.png",
+                      AssetsImages.offerIcon,
                       width: 24,
                       height: 24,
                     ),
@@ -306,7 +306,7 @@ class _HomePageState extends State<HomePage> {
                       width: 5,
                     ),
                     Text(
-                      "Offers",
+                      Constant.offerText,
                       style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.w600, fontSize: 21),
                     )
@@ -336,7 +336,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 padding: const EdgeInsets.only(top: 17, left: 20),
                 child: Text(
-                  "Featured Restaurant",
+                  Constant.featuredText,
                   style: GoogleFonts.montserrat(
                       fontSize: 22, fontWeight: FontWeight.w600),
                 ),
@@ -394,7 +394,7 @@ class _HomePageState extends State<HomePage> {
                                       borderRadius: BorderRadius.circular(20)),
                                   child: const Icon(
                                     Icons.favorite_border,
-                                    color: Color(0xFFF06573),
+                                    color: Color(Constant.mainColor),
                                     size: 15,
                                   ),
                                 ),
@@ -507,7 +507,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 padding: const EdgeInsets.only(top: 17, left: 20),
                 child: Text(
-                  "Must Try",
+                  Constant.mustTry,
                   style: GoogleFonts.montserrat(
                       fontSize: 22, fontWeight: FontWeight.w600),
                 ),
@@ -565,7 +565,7 @@ class _HomePageState extends State<HomePage> {
                                       borderRadius: BorderRadius.circular(20)),
                                   child: const Icon(
                                     Icons.favorite_border,
-                                    color: Color(0xFFF06573),
+                                    color: Color(Constant.mainColor),
                                     size: 15,
                                   ),
                                 ),
@@ -682,7 +682,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Image.asset(
-          "assets/images/fabicon.png",
+         AssetsImages.fabIcon,
           height: 15,
           width: 21,
         ),

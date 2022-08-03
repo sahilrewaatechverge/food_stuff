@@ -1,7 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:foodapp/screens/track_page.dart';
+import 'package:foodapp/util/assets_images.dart';
+import 'package:foodapp/util/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CartPage extends StatefulWidget {
@@ -22,7 +23,7 @@ class _CartPageState extends State<CartPage> {
       appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          shadowColor: const Color(0x00ffffff),
+          shadowColor: const Color(Constant.transparent),
           title: Text(
             widget.title,
             style: GoogleFonts.montserrat(
@@ -51,7 +52,7 @@ class _CartPageState extends State<CartPage> {
                         const Positioned(
                           child: Icon(
                             Icons.location_on_outlined,
-                            color: Color(0xFFF06573),
+                            color: Color(Constant.mainColor),
                           ),
                         ),
                         Positioned(
@@ -64,15 +65,15 @@ class _CartPageState extends State<CartPage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Titanium city center',
+                                  Constant.address1,
                                   style: GoogleFonts.montserrat(
                                       color: const Color(
-                                        0xFFF06573,
+                                        Constant.mainColor,
                                       ),
                                       fontSize: 14),
                                 ),
                                 Text(
-                                  "Seema Hall, 100 feet Anand nagar Road, jo...",
+                                  Constant.address2,
                                   overflow: TextOverflow.ellipsis,
                                   style: GoogleFonts.montserrat(
                                       color: Colors.black, fontSize: 14),
@@ -86,11 +87,11 @@ class _CartPageState extends State<CartPage> {
                           child: TextButton(
                             onPressed: () {},
                             child: Text(
-                              "Change",
+                              Constant.change,
                               style: GoogleFonts.montserrat(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w500,
-                                  color: const Color(0xFFF06573)),
+                                  color: const Color(Constant.mainColor)),
                             ),
                           ),
                         ),
@@ -112,7 +113,7 @@ class _CartPageState extends State<CartPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/vegicon.png",
+                          AssetsImages.vegIcon,
                           height: 10,
                           width: 10,
                         ),
@@ -123,7 +124,7 @@ class _CartPageState extends State<CartPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Cheese Burst Frankie',
+                                Constant.itemName1,
                                 style: GoogleFonts.montserrat(
                                     color: Colors.black, fontSize: 14),
                               ),
@@ -140,7 +141,7 @@ class _CartPageState extends State<CartPage> {
                           width: 61,
                           height: 20,
                           decoration: BoxDecoration(
-                              color: const Color(0xFFF06573),
+                              color: const Color(Constant.mainColor),
                               borderRadius: BorderRadius.circular(4)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -161,7 +162,7 @@ class _CartPageState extends State<CartPage> {
                                 },
                               ),
                               Text(
-                                count == 0 ? "Add" : count.toString(),
+                                count == 0 ? Constant.add : count.toString(),
                                 style: GoogleFonts.montserrat(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500,
@@ -200,7 +201,7 @@ class _CartPageState extends State<CartPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Image.asset(
-                          "assets/images/vegicon.png",
+                          AssetsImages.vegIcon,
                           height: 10,
                           width: 10,
                         ),
@@ -211,7 +212,7 @@ class _CartPageState extends State<CartPage> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Cold Coffee',
+                                Constant.itemName2,
                                 style: GoogleFonts.montserrat(
                                     color: Colors.black, fontSize: 14),
                               ),
@@ -228,7 +229,7 @@ class _CartPageState extends State<CartPage> {
                           width: 61,
                           height: 20,
                           decoration: BoxDecoration(
-                              color: const Color(0xFFF06573),
+                              color: const Color(Constant.mainColor),
                               borderRadius: BorderRadius.circular(4)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -279,7 +280,7 @@ class _CartPageState extends State<CartPage> {
                 ),
                 Row(
                   children: [
-                    const Icon(Icons.add, size: 11, color: Color(0xFFF06573)),
+                    const Icon(Icons.add, size: 11, color: Color(Constant.mainColor)),
                     const SizedBox(
                       width: 7,
                     ),
@@ -288,7 +289,7 @@ class _CartPageState extends State<CartPage> {
                       style: GoogleFonts.montserrat(
                           fontSize: 10,
                           fontWeight: FontWeight.w500,
-                          color: const Color(0xFFF06573)),
+                          color: const Color(Constant.mainColor)),
                     )
                   ],
                 ),
@@ -301,11 +302,11 @@ class _CartPageState extends State<CartPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       border:
-                          Border.all(width: 1, color: const Color(0xFFF06573))),
+                          Border.all(width: 1, color: const Color(Constant.mainColor))),
                   child: Text(
-                    "Apply Coupon",
+                    Constant.applyCoupon,
                     style: GoogleFonts.montserrat(
-                        color: const Color(0xFFF06573),
+                        color: const Color(Constant.mainColor),
                         fontWeight: FontWeight.w500,
                         fontSize: 17),
                   ),
@@ -327,7 +328,7 @@ class _CartPageState extends State<CartPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Payment Summery",
+                          Constant.paymentSummery,
                           style: GoogleFonts.montserrat(
                               fontSize: 16, fontWeight: FontWeight.w600),
                         ),
@@ -338,7 +339,7 @@ class _CartPageState extends State<CartPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Item Total",
+                              Constant.itemTotal,
                               style: GoogleFonts.montserrat(
                                   fontWeight: FontWeight.w400, fontSize: 12),
                             ),
@@ -356,7 +357,7 @@ class _CartPageState extends State<CartPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Tax & Charges",
+                              Constant.tax,
                               style: GoogleFonts.montserrat(
                                   fontWeight: FontWeight.w400, fontSize: 12),
                             ),
@@ -374,7 +375,7 @@ class _CartPageState extends State<CartPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Delivery fee",
+                              Constant.deliveryFee,
                               style: GoogleFonts.montserrat(
                                   fontWeight: FontWeight.w400, fontSize: 12),
                             ),
@@ -399,7 +400,7 @@ class _CartPageState extends State<CartPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                "Grand Total",
+                                Constant.grandTotal,
                                 style: GoogleFonts.montserrat(
                                     fontWeight: FontWeight.w500, fontSize: 15),
                               ),
@@ -427,7 +428,7 @@ class _CartPageState extends State<CartPage> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(23),
                                 border: Border.all(
-                                    width: 1, color: const Color(0xFFC7C7C7))),
+                                    width: 1, color: const Color(Constant.lightGrayColor))),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -435,7 +436,7 @@ class _CartPageState extends State<CartPage> {
                                 Row(
                                   children: [
                                     Text(
-                                      "Pay Using",
+                                      Constant.payUsing,
                                       style: GoogleFonts.montserrat(
                                           fontWeight: FontWeight.w500,
                                           fontSize: 10),
@@ -443,12 +444,12 @@ class _CartPageState extends State<CartPage> {
                                     const Icon(
                                       Icons.arrow_drop_up,
                                       size: 15,
-                                      color: Color(0xFFF06573),
+                                      color: Color(Constant.mainColor),
                                     ),
                                   ],
                                 ),
                                 Text(
-                                  "Cash on Delivery",
+                                  Constant.cod,
                                   style: GoogleFonts.montserrat(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 10),
@@ -467,24 +468,24 @@ class _CartPageState extends State<CartPage> {
                                   borderRadius: BorderRadius.circular(23),
                                   border: Border.all(
                                       width: 1,
-                                      color: const Color(0xFFF06573))),
+                                      color: const Color(Constant.mainColor))),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "Pay Now",
+                                    Constant.payNow,
                                     style: GoogleFonts.montserrat(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 18,
-                                        color: const Color(0xFFF06573)),
+                                        color: const Color(Constant.mainColor)),
                                   ),
                                   Text(
                                     "₹250",
                                     style: GoogleFonts.montserrat(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 16,
-                                        color: const Color(0xFFF06573)),
+                                        color: const Color(Constant.mainColor)),
                                   ),
                                 ],
                               ),
@@ -505,7 +506,7 @@ class _CartPageState extends State<CartPage> {
                                               MainAxisAlignment.center,
                                           children: [
                                             Image.asset(
-                                              "assets/images/otpconfirm.png",
+                                              AssetsImages.confirmIcon,
                                               height: 119,
                                               width: 119,
                                             ),
@@ -513,12 +514,12 @@ class _CartPageState extends State<CartPage> {
                                               height: 42,
                                             ),
                                             Text(
-                                              "Order Confirmed",
+                                              Constant.orderConfirm,
                                               style: GoogleFonts.montserrat(
                                                   fontSize: 25,
                                                   fontWeight: FontWeight.w700,
                                                   color:
-                                                      const Color(0xFFF06573)),
+                                                      const Color(Constant.mainColor)),
                                             )
                                           ],
                                         )),
@@ -532,7 +533,7 @@ class _CartPageState extends State<CartPage> {
                                   ),
                                 ),
                               );
-                            })
+                            }),
                       ],
                     ),
                   ),

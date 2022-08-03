@@ -118,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                         Container(
                           width: MediaQuery.of(context).size.width * 0.3,
                           height: 2,
-                          color: const Color(Constant.lighiGrayColor),
+                          color: const Color(Constant.lightGrayColor),
                         ),
                         Text(
                           Constant.loginWith,
@@ -128,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                         Container(
                           width: MediaQuery.of(context).size.width * 0.3,
                           height: 2,
-                          color: const Color(Constant.lighiGrayColor),
+                          color: const Color(Constant.lightGrayColor),
                         )
                       ],
                     ),
@@ -150,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
                     RichText(
                       text: TextSpan(children: [
                         TextSpan(
-                          text: Constant.dontHave,
+                          text: Constant.doNotHave,
                           style: GoogleFonts.montserrat(
                               fontSize: 14, color: const Color(Constant.textGrayColor)),
                         ),

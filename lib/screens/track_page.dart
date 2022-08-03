@@ -1,5 +1,7 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
+import 'package:foodapp/util/assets_images.dart';
+import 'package:foodapp/util/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TrackPage extends StatefulWidget {
@@ -21,14 +23,14 @@ class _TrackPageState extends State<TrackPage> {
           child: Stack(
             children: [
               Image.asset(
-                "assets/images/mapimg.png",
+                AssetsImages.mapImg,
                 height: 755,
               ),
               Positioned(
                   top: 230,
                   left: 98,
                   child: Image.asset(
-                    "assets/images/map.png",
+                    AssetsImages.mapTrack,
                     height: 333,
                     width: 246.5,
                   )),
@@ -38,7 +40,7 @@ class _TrackPageState extends State<TrackPage> {
                   child: Icon(
                     Icons.location_on,
                     size: 44,
-                    color: Color(0xFFF06573),
+                    color: Color(Constant.mainColor),
                   )),
               const Positioned(
                   top: 186,
@@ -46,7 +48,7 @@ class _TrackPageState extends State<TrackPage> {
                   child: Icon(
                     Icons.location_on,
                     size: 44,
-                    color: Color(0xFFF06573),
+                    color: Color(Constant.mainColor),
                   )),
               Positioned(
                 top: 30,
@@ -55,7 +57,7 @@ class _TrackPageState extends State<TrackPage> {
                   width: 44,
                   height: 44,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFFFFFFF),
+                    color: const Color(Constant.white),
                     borderRadius: BorderRadius.circular(22),
                   ),
                   child: const Center(
@@ -78,7 +80,7 @@ class _TrackPageState extends State<TrackPage> {
                       child: Padding(
                     padding: const EdgeInsets.all(5),
                     child: Text(
-                      "Track Order",
+                      Constant.trackOrder,
                       style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.w600, fontSize: 16),
                     ),
@@ -102,18 +104,18 @@ class _TrackPageState extends State<TrackPage> {
                           children: [
                             RichText(
                                 text: TextSpan(
-                                    text: "Estimated Time",
+                                    text: Constant.estimatedTime,
                                     style: GoogleFonts.montserrat(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
                                         color: Colors.black),
                                     children: [
                                   TextSpan(
-                                    text: " 30 min",
+                                    text: "30 min",
                                     style: GoogleFonts.montserrat(
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
-                                        color: const Color(0xFFF06573)),
+                                        color: const Color(Constant.mainColor)),
                                   )
                                 ])),
                             const SizedBox(
@@ -128,12 +130,12 @@ class _TrackPageState extends State<TrackPage> {
                                     width: 32,
                                     height: 32,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFFF06573),
+                                      color: const Color(Constant.mainColor),
                                       borderRadius: BorderRadius.circular(22),
                                     ),
                                     child: Center(
                                       child: Image.asset(
-                                        "assets/images/orderplace.png",
+                                        AssetsImages.orderPlace,
                                         height: 16,
                                         width: 16,
                                         color: Colors.white,
@@ -145,7 +147,7 @@ class _TrackPageState extends State<TrackPage> {
                                     lineThickness: 1,
                                     lineLength: 67,
                                     dashLength: 2,
-                                    dashColor: Color(0xFFF06573),
+                                    dashColor: Color(Constant.mainColor),
                                   ),
                                   Container(
                                     width: 32,
@@ -155,14 +157,14 @@ class _TrackPageState extends State<TrackPage> {
                                         borderRadius: BorderRadius.circular(22),
                                         border: Border.all(
                                           width: 2,
-                                          color: const Color(0xFFC7C7C7),
+                                          color: const Color(Constant.lightGrayColor),
                                         )),
                                     child: Center(
                                       child: Image.asset(
-                                        "assets/images/orderprepare.png",
+                                        AssetsImages.orderPrepare,
                                         height: 16,
                                         width: 16,
-                                        color: const Color(0xFFC7C7C7),
+                                        color: const Color(Constant.lightGrayColor),
                                       ),
                                     ),
                                   ),
@@ -171,7 +173,7 @@ class _TrackPageState extends State<TrackPage> {
                                     lineThickness: 1,
                                     lineLength: 67,
                                     dashLength: 2,
-                                    dashColor: Color(0xFFC7C7C7),
+                                    dashColor: Color(Constant.lightGrayColor),
                                   ),
                                   Container(
                                     width: 32,
@@ -181,14 +183,14 @@ class _TrackPageState extends State<TrackPage> {
                                         borderRadius: BorderRadius.circular(22),
                                         border: Border.all(
                                           width: 2,
-                                          color: const Color(0xFFC7C7C7),
+                                          color: const Color(Constant.lightGrayColor),
                                         )),
                                     child: Center(
                                       child: Image.asset(
-                                        "assets/images/outfor.png",
+                                        AssetsImages.outFor,
                                         height: 16,
                                         width: 16,
-                                        color: const Color(0xFFC7C7C7),
+                                        color: const Color(Constant.lightGrayColor),
                                       ),
                                     ),
                                   ),
@@ -197,7 +199,7 @@ class _TrackPageState extends State<TrackPage> {
                                     lineThickness: 1,
                                     lineLength: 67,
                                     dashLength: 2,
-                                    dashColor: Color(0xFFC7C7C7),
+                                    dashColor: Color(Constant.lightGrayColor),
                                   ),
                                   Container(
                                     width: 32,
@@ -207,14 +209,14 @@ class _TrackPageState extends State<TrackPage> {
                                         borderRadius: BorderRadius.circular(22),
                                         border: Border.all(
                                           width: 2,
-                                          color: const Color(0xFFC7C7C7),
+                                          color: const Color(Constant.lightGrayColor),
                                         )),
                                     child: Center(
                                       child: Image.asset(
-                                        "assets/images/deliver.png",
+                                        AssetsImages.deliver,
                                         height: 16,
                                         width: 16,
-                                        color: const Color(0xFFC7C7C7),
+                                        color: const Color(Constant.lightGrayColor),
                                       ),
                                     ),
                                   ),
@@ -228,38 +230,38 @@ class _TrackPageState extends State<TrackPage> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "Order\nPlaced",
+                                    Constant.orderPlaced,
                                     maxLines: 2,
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.montserrat(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 12,
-                                        color: const Color(0xFFF06573)),
+                                        color: const Color(Constant.mainColor)),
                                   ),
                                   Text(
-                                    "Preparing your\norder",
+                                    Constant.preparingOrder,
                                     maxLines: 2,
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.montserrat(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 12,
-                                        color: const Color(0xFFC7C7C7)),
+                                        color: const Color(Constant.lightGrayColor)),
                                   ),
                                   Text(
-                                    "Out For\nDelivery",
+                                    Constant.outForDelivery,
                                     maxLines: 2,
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.montserrat(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 12,
-                                        color: const Color(0xFFC7C7C7)),
+                                        color: const Color(Constant.lightGrayColor)),
                                   ),
                                   Text(
-                                    "Delivered",
+                                    Constant.delivery,
                                     style: GoogleFonts.montserrat(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 12,
-                                        color: const Color(0xFFC7C7C7)),
+                                        color: const Color(Constant.lightGrayColor)),
                                   ),
                                 ]),
                             const SizedBox(
@@ -276,7 +278,7 @@ class _TrackPageState extends State<TrackPage> {
                                       decoration: const BoxDecoration(
                                           image: DecorationImage(
                                               image: AssetImage(
-                                        "assets/images/person.png",
+                                        AssetsImages.deliveryPerson,
                                       ))),
                                       height: 36,
                                       width: 36,
@@ -296,11 +298,11 @@ class _TrackPageState extends State<TrackPage> {
                                               color: Colors.black),
                                         ),
                                         Text(
-                                          "your delivery boy",
+                                          Constant.deliveryBoy,
                                           style: GoogleFonts.montserrat(
                                               fontWeight: FontWeight.w400,
                                               fontSize: 10,
-                                              color: const Color(0xFF9D9D9D)),
+                                              color: const Color(Constant.lightGrayColor)),
                                         ),
                                       ],
                                     )
@@ -314,14 +316,14 @@ class _TrackPageState extends State<TrackPage> {
                                       borderRadius: BorderRadius.circular(22),
                                       border: Border.all(
                                         width: 2,
-                                        color: const Color(0xFFF06573),
+                                        color: const Color(Constant.mainColor),
                                       )),
                                   child: Center(
                                     child: Image.asset(
-                                      "assets/images/phone.png",
+                                      AssetsImages.phoneIcon,
                                       height: 14,
                                       width: 14,
-                                      color: const Color(0xFFF06573),
+                                      color: const Color(Constant.mainColor),
                                     ),
                                   ),
                                 ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:foodapp/screens/cart_page.dart';
 import 'package:foodapp/models/restaurants.dart';
+import 'package:foodapp/util/assets_images.dart';
+import 'package:foodapp/util/constant.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MenuPage extends StatefulWidget {
@@ -13,7 +15,7 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
-  void isSlected(bool ison) {}
+  void isSelect(bool isOn) {}
   int count = 0;
 
   @override
@@ -39,7 +41,7 @@ class _MenuPageState extends State<MenuPage> {
                         },
                         icon: Container(
                           decoration: BoxDecoration(
-                            color: const Color(0x80000000),
+                            color: const Color(Constant.textBlackColor),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: const Center(
@@ -64,7 +66,7 @@ class _MenuPageState extends State<MenuPage> {
                               borderRadius: BorderRadius.circular(20)),
                           child: const Icon(
                             Icons.shopping_cart_outlined,
-                            color: Color(0xFFF06573),
+                            color: Color(Constant.mainColor),
                             size: 24,
                           ),
                         ),
@@ -80,7 +82,7 @@ class _MenuPageState extends State<MenuPage> {
                         right: 0,
                         top: 143,
                         child: Image.asset(
-                          "assets/images/vegbannerrev.png",
+                          AssetsImages.vegBanner,
                           height: 20,
                           width: 78,
                         )),
@@ -135,11 +137,11 @@ class _MenuPageState extends State<MenuPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Overview",
+                                      Constant.overview,
                                       style: GoogleFonts.montserrat(
                                           fontWeight: FontWeight.w600,
                                           fontSize: 19,
-                                          color: const Color(0xFFF06573)),
+                                          color: const Color(Constant.mainColor)),
                                     ),
                                     const SizedBox(
                                       height: 8,
@@ -176,7 +178,7 @@ class _MenuPageState extends State<MenuPage> {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Now Open",
+                                      Constant.nowOpen,
                                       style: GoogleFonts.montserrat(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12,
@@ -205,7 +207,7 @@ class _MenuPageState extends State<MenuPage> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            "Pure Veg",
+                            Constant.pureVeg,
                             style: GoogleFonts.montserrat(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 10,
@@ -218,7 +220,7 @@ class _MenuPageState extends State<MenuPage> {
                               fit: BoxFit.fill,
                               child: Switch(
                                 value: true,
-                                onChanged: isSlected,
+                                onChanged: isSelect,
                                 activeColor: const Color(0xFF60A894),
                               ),
                             ),
@@ -227,11 +229,11 @@ class _MenuPageState extends State<MenuPage> {
                             width: 12,
                           ),
                           Text(
-                            "Non Veg",
+                            Constant.nonVeg,
                             style: GoogleFonts.montserrat(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 10,
-                                color: const Color(0xFFF12C2C)),
+                                color: const Color(Constant.textRedColor)),
                           ),
                           SizedBox(
                             width: 23,
@@ -242,8 +244,8 @@ class _MenuPageState extends State<MenuPage> {
                                 inactiveThumbColor: Colors.grey.shade300,
                                 inactiveTrackColor: Colors.grey.shade300,
                                 value: false,
-                                onChanged: isSlected,
-                                activeColor: const Color(0xFFF12C2C),
+                                onChanged: isSelect,
+                                activeColor: const Color(Constant.textRedColor),
                               ),
                             ),
                           ),
@@ -251,11 +253,11 @@ class _MenuPageState extends State<MenuPage> {
                             width: 12,
                           ),
                           Text(
-                            "Customize",
+                            Constant.customize,
                             style: GoogleFonts.montserrat(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 10,
-                                color: const Color(0xFF5F66D1)),
+                                color: const Color(Constant.textBlueColor)),
                           ),
                           SizedBox(
                             width: 23,
@@ -266,8 +268,8 @@ class _MenuPageState extends State<MenuPage> {
                                 inactiveThumbColor: Colors.grey.shade300,
                                 inactiveTrackColor: Colors.grey.shade300,
                                 value: false,
-                                onChanged: isSlected,
-                                activeColor: const Color(0xFF5F66D1),
+                                onChanged: isSelect,
+                                activeColor: const Color(Constant.textBlueColor),
                               ),
                             ),
                           ),
@@ -302,7 +304,7 @@ class _MenuPageState extends State<MenuPage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.asset(
-                                    "assets/images/vegicon.png",
+                                    AssetsImages.vegIcon,
                                     height: 10,
                                     width: 10,
                                   ),
@@ -368,7 +370,7 @@ class _MenuPageState extends State<MenuPage> {
                                           width: 61,
                                           height: 20,
                                           decoration: BoxDecoration(
-                                              color: const Color(0xFFF06573),
+                                              color: const Color(Constant.mainColor),
                                               borderRadius:
                                                   BorderRadius.circular(4)),
                                           child: Row(
@@ -392,7 +394,7 @@ class _MenuPageState extends State<MenuPage> {
                                               ),
                                               Text(
                                                 count == 0
-                                                    ? "Add"
+                                                    ? Constant.add
                                                     : count.toString(),
                                                 style: GoogleFonts.montserrat(
                                                     color: Colors.white,
@@ -424,7 +426,7 @@ class _MenuPageState extends State<MenuPage> {
                           transform: Matrix4.translationValues(0, 7, 0),
                           width: MediaQuery.of(context).size.width,
                           height: 1,
-                          color: const Color(0xFFEAEAEA),
+                          color: const Color(Constant.lightGrayColor),
                         )
                       ],
                     ),

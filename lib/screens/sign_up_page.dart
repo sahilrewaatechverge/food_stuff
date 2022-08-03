@@ -46,14 +46,14 @@ class _SignUpPageState extends State<SignUpPage> {
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: TextField(
                         style: GoogleFonts.montserrat(
-                            fontSize: 14, color: const Color(Constant.lighiGrayColor)),
+                            fontSize: 14, color: const Color(Constant.lightGrayColor)),
                         keyboardType: TextInputType.name,
                         controller: nameController,
                         decoration: InputDecoration(
                           label: Text(
                             Constant.fullName,
                             style: GoogleFonts.montserrat(
-                                fontSize: 14, color: const Color(Constant.lighiGrayColor)),
+                                fontSize: 14, color: const Color(Constant.lightGrayColor)),
                           ),
                           counterText: "",
                           border: OutlineInputBorder(
@@ -69,14 +69,14 @@ class _SignUpPageState extends State<SignUpPage> {
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: TextField(
                         style: GoogleFonts.montserrat(
-                            fontSize: 14, color: const Color(Constant.lighiGrayColor)),
+                            fontSize: 14, color: const Color(Constant.lightGrayColor)),
                         keyboardType: TextInputType.emailAddress,
                         controller: emailController,
                         decoration: InputDecoration(
                           label: Text(
                             Constant.email,
                             style: GoogleFonts.montserrat(
-                                fontSize: 14, color: const Color(Constant.lighiGrayColor)),
+                                fontSize: 14, color: const Color(Constant.lightGrayColor)),
                           ),
                           counterText: "",
                           border: OutlineInputBorder(
@@ -92,7 +92,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       padding: const EdgeInsets.only(left: 40, right: 40),
                       child: TextField(
                         style: GoogleFonts.montserrat(
-                            fontSize: 14, color: const Color(Constant.lighiGrayColor)),
+                            fontSize: 14, color: const Color(Constant.lightGrayColor)),
                         maxLength: 10,
                         keyboardType: TextInputType.number,
                         controller: phoneController,
@@ -100,7 +100,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           label: Text(
                             Constant.mobile,
                             style: GoogleFonts.montserrat(
-                                fontSize: 14, color: const Color(Constant.lighiGrayColor)),
+                                fontSize: 14, color: const Color(Constant.lightGrayColor)),
                           ),
                           counterText: "",
                           border: OutlineInputBorder(
@@ -186,17 +186,17 @@ class _SignUpPageState extends State<SignUpPage> {
                           Container(
                             width: 95,
                             height: 2,
-                            color: const Color(0xFFC7C7C7),
+                            color: const Color(Constant.lightGrayColor),
                           ),
                           Text(Constant.signUpWith,
                               style: GoogleFonts.montserrat(
-                                  color: const Color(0xFF9D9D9D),
+                                  color: const Color(Constant.lightGrayColor),
                                   fontSize: 17,
                                   fontStyle: FontStyle.normal)),
                           Container(
                             width: 95,
                             height: 2,
-                            color: const Color(0xFFC7C7C7),
+                            color: const Color(Constant.lightGrayColor),
                           )
                         ],
                       ),

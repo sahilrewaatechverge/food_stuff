@@ -13,6 +13,21 @@ class AssetsImages {
   static const String onBoardIcon3 = "assets/images/onboardicon3.png";
   static const String offerIcon1 = "assets/images/offer1.png";
   static const String offerIcon2 = "assets/images/offer2.png";
+  static const String alertIcon = "assets/images/alert.png";
+  static const String favIcon = "assets/images/favicon.png";
+  static const String personIcon = "assets/images/accounticon.png";
+  static const String offerIcon = "assets/images/offericon.png";
+  static const String fabIcon = "assets/images/fabicon.png";
+  static const String vegBanner = "assets/images/vegbannerrev.png";
+  static const String vegIcon = "assets/images/vegicon.png";
+  static const String mapImg = "assets/images/mapimg.png";
+  static const String mapTrack = "assets/images/map.png";
+  static const String orderPlace = "assets/images/orderplace.png";
+  static const String orderPrepare = "assets/images/orderprepare.png";
+  static const String outFor = "assets/images/outfor.png";
+  static const String deliver = "assets/images/deliver.png";
+  static const String deliveryPerson = "assets/images/person.png";
+  static const String phoneIcon = "assets/images/phone.png";
 
 
 
